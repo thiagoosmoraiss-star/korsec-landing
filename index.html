@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KORSEC — Sistema de gestão, sites e automação para o interior de MG</title>
-<meta name="description" content="A Korsec cria sistemas de gestão sob medida, sites profissionais e automações para empresas do interior de Minas Gerais. Teste o sistema agora, sem compromisso.">
+<title>KORSEC — Sistema de gestão, sites e automação sob medida</title>
+<meta name="description" content="A Korsec cria sistemas de gestão sob medida, sites profissionais e automações para empresas que querem sair da planilha. Teste o sistema agora, sem compromisso.">
 <link rel="icon" href="favicon-korsec-branca.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,10 @@ body::before{
   content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.05;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
+body::after{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:radial-gradient(120% 90% at 50% -10%, transparent 40%, rgba(0,0,0,.4) 100%);
+}
 body>*{position:relative; z-index:1}
 .brandbar{position:relative; height:3px; background:linear-gradient(90deg,var(--accent),var(--accent2))}
 h1,h2,h3{font-family:var(--ff-display); line-height:1.15; text-wrap:balance; margin:0}
@@ -61,6 +65,8 @@ img{max-width:100%; display:block}
 .btn-primary:hover{background:var(--accent-bright)}
 .btn-ghost{background:transparent; color:var(--text); border-color:var(--border)}
 .btn-ghost:hover{border-color:var(--halo); background:rgba(122,167,255,.06)}
+.btn-accent{background:var(--accent2); color:#1b2434; box-shadow:0 8px 24px -10px rgba(244,194,61,.5)}
+.btn-accent:hover{background:#ffd467}
 .btn-sm{padding:.6em 1.1em; font-size:.86rem}
 
 /* ---------- topo ---------- */
@@ -217,6 +223,12 @@ section{padding:80px 0}
   background:rgba(47,111,235,.12); color:var(--halo); margin-bottom:14px}
 .why .item h3{font-size:1.02rem; font-weight:600; margin-bottom:6px}
 .why .item p{color:var(--muted); font-size:.88rem}
+.proof-panel{
+  margin-top:28px; display:flex; align-items:flex-start; gap:14px;
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px 24px;
+}
+.proof-panel svg{flex:0 0 auto; margin-top:2px}
+.proof-panel p{color:var(--muted); font-size:.92rem; line-height:1.6}
 
 /* ---------- planos ---------- */
 .plans{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch}
@@ -230,6 +242,20 @@ section{padding:80px 0}
 .plan ul{list-style:none; padding:0; margin:12px 0 20px; display:grid; gap:9px; font-size:.88rem}
 .plan ul li{display:flex; gap:9px}
 .plan .btn{margin-top:auto; justify-content:center}
+
+/* ---------- faq ---------- */
+.faq-list{display:grid; gap:12px; max-width:760px}
+.faq-item{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:4px 22px}
+.faq-item summary{
+  cursor:pointer; list-style:none; padding:18px 0; font-family:var(--ff-display); font-weight:600;
+  font-size:1rem; display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+"; font-size:1.3rem; color:var(--halo); flex:0 0 auto; transition:transform .2s ease;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{color:var(--muted); font-size:.92rem; line-height:1.65; padding:0 0 20px}
 
 /* ---------- faixa final ---------- */
 .cta-band{background:linear-gradient(120deg,var(--panel),var(--elev)); border-top:1px solid var(--border); border-bottom:1px solid var(--border)}
@@ -255,6 +281,72 @@ footer a:hover{color:var(--text)}
 }
 :focus-visible{outline:2px solid var(--halo); outline-offset:2px; border-radius:6px}
 
+
+/* ================================================================
+   KORSEC / TECH ATMOSPHERE — evolução visual da landing page
+   Sem dependências externas; mantém os textos, links e componentes.
+   ================================================================ */
+:root{
+  --bg:#050a13; --bg2:#081323; --panel:#0c192b; --elev:#11243a;
+  --border:#25405c; --accent:#3684ff; --accent-bright:#62a6ff;
+  --halo:#80c2ff; --muted:#a1b5ca;
+}
+html{background:#050a13}
+body{
+  background:
+    radial-gradient(ellipse 65% 55% at 83% 8%,rgba(17,89,187,.22),transparent 75%),
+    radial-gradient(ellipse 65% 55% at 0% 39%,rgba(8,68,122,.16),transparent 75%),
+    linear-gradient(145deg,#050912 0%,#07111f 49%,#050a13 100%);
+  background-attachment:fixed;
+}
+/* Malha geométrica fina, coordenadas e brilhos azuis */
+body::before{
+  opacity:1;
+  background-image:
+    linear-gradient(rgba(70,142,210,.052) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(70,142,210,.052) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.32) 58%,rgba(0,0,0,.7));
+}
+body::after{
+  background:
+    radial-gradient(ellipse 38% 50% at 84% 26%,rgba(15,106,213,.12),transparent 75%),
+    linear-gradient(90deg,rgba(3,8,17,.18),transparent 30%,rgba(3,8,17,.12));
+}
+#bg{opacity:.95}
+.brandbar{height:2px;background:linear-gradient(90deg,transparent,#3894ff 30%,#77d4ff 56%,#f4c23d 78%,transparent);box-shadow:0 0 24px rgba(69,154,255,.5)}
+header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232,.15);box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.hero{isolation:isolate; padding:104px 0 94px}
+.hero::before{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  top:-270px;right:-210px;width:min(900px,85vw);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(35,125,245,.16) 0%,rgba(22,81,170,.07) 40%,transparent 71%);
+}
+.hero::after{
+  content:"";position:absolute;left:6%;bottom:0;right:6%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(94,170,252,.35),transparent);
+}
+.hero h1{letter-spacing:-.035em;font-size:clamp(2.25rem,4.5vw,3.65rem);line-height:1.16}
+.hero .sub{color:#b1c1d2}
+.hero .eyebrow{padding:8px 12px;border:1px solid rgba(81,153,240,.23);border-radius:7px;background:rgba(40,110,206,.075);letter-spacing:.09em}
+.hero-mock{background:linear-gradient(150deg,rgba(24,47,73,.95),rgba(7,18,35,.96));border-color:rgba(100,179,255,.3);box-shadow:0 30px 80px -23px rgba(0,0,0,.86),0 0 75px -50px rgba(57,151,255,.8)}
+.hero-mock::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 1px 0 rgba(151,210,255,.14)}
+.card,.why .item,.plan,.faq-item,.proof-panel{background:linear-gradient(150deg,rgba(17,35,55,.9),rgba(9,21,38,.93));border-color:rgba(88,143,196,.22);box-shadow:0 12px 36px rgba(0,0,0,.12)}
+.card:hover,.why .item:hover,.plan:hover{border-color:rgba(94,174,253,.46);box-shadow:0 18px 45px rgba(0,0,0,.22),0 0 28px rgba(44,124,232,.06)}
+.card.flagship{background:linear-gradient(125deg,rgba(22,51,80,.95),rgba(11,27,48,.96) 60%,rgba(17,45,75,.95));border-color:rgba(84,160,242,.4)}
+.showcase{background:linear-gradient(180deg,rgba(8,21,38,.8),rgba(7,17,32,.9))}
+#planos{background:linear-gradient(180deg,rgba(7,19,34,.86),rgba(9,24,43,.82)) !important}
+.cta-band{background:linear-gradient(110deg,rgba(10,27,49,.95),rgba(18,48,76,.94),rgba(9,23,43,.96));border-color:rgba(90,155,225,.22)}
+.btn-primary{background:linear-gradient(135deg,#2e75e8,#428eff);box-shadow:0 8px 25px -9px rgba(35,122,248,.55)}
+.btn-ghost{background:rgba(14,36,61,.25);border-color:rgba(110,166,221,.3)}
+.section-head .eyebrow{letter-spacing:.16em}
+@media(max-width:700px){
+  .hero{padding:66px 0 65px}
+  .hero h1{font-size:clamp(2rem,8vw,2.8rem)}
+  body::before{background-size:38px 38px;opacity:.6}
+}
+@media(prefers-reduced-motion:reduce){#bg{opacity:.75}}
+
 </style>
 </head>
 <body>
@@ -270,8 +362,9 @@ footer a:hover{color:var(--text)}
       <a class="link" href="#servicos">Serviços</a>
       <a class="link" href="#como">Como funciona</a>
       <a class="link" href="#planos">Planos</a>
+      <a class="link" href="#faq">FAQ</a>
       <!-- EDITE: troque o número pelo seu WhatsApp (formato 55 + DDD + número) -->
-      <a class="btn btn-primary btn-sm" href="https://wa.me/5537999222538?text=Quero%20testar%20o%20sistema%20da%20Korsec" target="_blank" rel="noopener">Testar sistema</a>
+      <a class="btn btn-accent btn-sm" href="https://wa.me/5537999222538?text=Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">Diagnóstico gratuito</a>
     </nav>
   </div>
 </header>
@@ -281,17 +374,17 @@ footer a:hover{color:var(--text)}
 <section class="hero">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Korsec · Tecnologia para o Interior</span>
-      <h1>O sistema que organiza a sua empresa — e o site que leva clientes até ela.</h1>
-      <p class="sub">Criamos sistemas de gestão sob medida, sites profissionais e automações para pequenas e médias empresas de Minas Gerais. Sem contrato engessado, sem letra miúda: você testa antes de decidir.</p>
+      <span class="eyebrow">Korsec · Sistemas sob medida</span>
+      <h1>Sua empresa ainda roda no improviso — planilha, WhatsApp e "o Fulano que sabe mexer nisso".</h1>
+      <p class="sub">A Korsec tira sua operação do improviso com sistema de gestão, site e suporte de TI feitos sob medida — sem te prender a um contrato de um ano pra descobrir se funciona.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://wa.me/5537999222538?text=Quero%20testar%20o%20sistema%20da%20Korsec" target="_blank" rel="noopener">Testar o sistema grátis</a>
+        <a class="btn btn-accent" href="https://wa.me/5537999222538?text=Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">Agendar diagnóstico gratuito</a>
         <a class="btn btn-ghost" href="#sistema">Ver o sistema por dentro</a>
       </div>
       <div class="trustline">
-        <span><i class="dot"></i> Acesso de teste liberado em minutos</span>
+        <span><i class="dot"></i> Diagnóstico sem compromisso</span>
         <span><i class="dot"></i> Suporte direto com quem desenvolve</span>
-        <span><i class="dot"></i> Feito e hospedado para o Brasil</span>
+        <span><i class="dot"></i> Você testa antes de assinar qualquer coisa</span>
       </div>
     </div>
 
@@ -336,7 +429,7 @@ footer a:hover{color:var(--text)}
         <div>
           <span class="badge">Disponível</span>
           <h3 style="margin-top:14px">Sistema de Gestão (ERP)</h3>
-          <p class="lead">Um sistema único para cadastros, compras, estoque, financeiro, fiscal, faturamento, frotas e tarefas — com controle de acesso por perfil e tudo na nuvem, acessível de qualquer lugar.</p>
+          <p class="lead">Chega de três planilhas que não conversam entre si. Um sistema único pra cadastros, compras, estoque, financeiro, fiscal, faturamento, frotas e tarefas — com controle de acesso por perfil e tudo na nuvem, acessível de qualquer lugar.</p>
           <div class="mini-feats">
             <span class="eyebrow" style="color:var(--muted)">· Suprimentos</span>
             <span class="eyebrow" style="color:var(--muted)">· Financeiro</span>
@@ -360,7 +453,7 @@ footer a:hover{color:var(--text)}
       <article class="card reveal">
         <span class="badge blue">Sites</span>
         <h3>Sites profissionais</h3>
-        <p class="lead">Site institucional ou página de vendas, rápido, responsivo e pensado para converter visita em contato — como este aqui, que também fizemos nós mesmos.</p>
+        <p class="lead">Se seu site hoje não gera contato nenhum, ele só está ocupando espaço no Google. Site institucional ou página de vendas, rápido e pensado pra converter visita em contato — como este aqui, que também fizemos nós mesmos.</p>
         <div class="actions">
           <a class="btn btn-ghost" href="https://wa.me/5537999222538?text=Quero%20um%20site%20para%20minha%20empresa" target="_blank" rel="noopener">Quero um site</a>
         </div>
@@ -495,6 +588,12 @@ footer a:hover{color:var(--text)}
         <p>Fala com quem desenvolveu o sistema — sem central de atendimento nem fila de ticket.</p>
       </div>
     </div>
+
+    <!-- EDITE: troque pelo nome do cliente se tiver autorização para divulgar, ou mantenha genérico -->
+    <div class="proof-panel reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--halo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      <p>Já migramos o ambiente Microsoft&nbsp;365 completo de uma indústria de médio porte — mais de 150&nbsp;GB de arquivos reorganizados em 16 departamentos, sem perder permissão de ninguém no meio do caminho.</p>
+    </div>
   </div>
 </section>
 
@@ -549,6 +648,39 @@ footer a:hover{color:var(--text)}
     </div>
   </div>
 </section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Antes de você perguntar</h2>
+      <p>As dúvidas que mais ouvimos antes de fechar — sem enrolação.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Preciso trocar tudo de uma vez pra começar?</summary>
+        <p>Não. Você pode começar só com o site, só com um módulo do sistema, ou só com o suporte de TI, e ir somando conforme faz sentido pro seu caixa. Nada aqui é vendido como pacote fechado.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Quanto tempo leva a implantação?</summary>
+        <p>Depende do escopo. Um site sai em poucas semanas; um sistema com vários módulos ou migração de dados de outro programa leva mais tempo — no caso do Microsoft 365 que citamos acima, foram várias semanas por causa do volume de arquivos. No diagnóstico gratuito você já sai com um prazo real, não uma estimativa de propaganda.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Meus dados vão estar seguros?</summary>
+        <p>Cada usuário tem login próprio e só acessa os módulos liberados pra sua função — ninguém vê o financeiro só porque tem acesso ao sistema. Não temos certificação internacional pra te mostrar (somos uma empresa pequena, não vamos fingir o contrário), mas seguimos boas práticas de controle de acesso e backup, e explicamos exatamente como seus dados ficam guardados antes de você assinar qualquer coisa.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Preciso ter um time de TI interno pra manter o sistema funcionando?</summary>
+        <p>Não. É justamente pra isso que a Korsec existe — você fala direto com quem desenvolveu o sistema quando precisar de ajuda, sem contratar ninguém pra isso.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>E se eu contratar e não funcionar pro meu negócio?</summary>
+        <p>Por isso o diagnóstico e o acesso de demonstração são gratuitos: a ideia é você decidir depois de ver funcionando, não antes.</p>
+      </details>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ================= FAIXA FINAL ================= -->
@@ -569,7 +701,7 @@ footer a:hover{color:var(--text)}
   <div class="wrap">
     <div>
       <img class="logo" src="logo-korsec-branca.png" alt="Korsec">
-      <div>Tecnologia para o Interior.</div>
+      <div>Sistemas sob medida.</div>
       <div style="margin-top:6px">© 2026 Korsec · Sistemas Personalizados</div>
     </div>
     <div style="text-align:right; line-height:2">
@@ -602,82 +734,82 @@ footer a:hover{color:var(--text)}
   });
 })();
 
+/* ===================================================================
+   FUNDO TECH — circuitos, pulsos de dados e pontos de conexão.
+   Canvas leve e adaptativo, respeita preferência por movimento reduzido.
+   =================================================================== */
 (function(){
-  var prefereMenos = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(prefereMenos) return;
-
-  var cv = document.getElementById('bg'), ctx = cv.getContext('2d');
-  var W, H, DPR, GRID = 64, linhas = [];
-  var COR_LINHA = '210,225,255';
-  var COR_TRACO = '80,140,255';
-
-  function dim(){
-    DPR = Math.min(window.devicePixelRatio || 1, 2);
-    W = window.innerWidth; H = window.innerHeight;
-    cv.width = W * DPR; cv.height = H * DPR;
-    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    ctx.clearRect(0, 0, W, H);
-  }
-
-  function nova(eixo){
-    if(eixo === 'h'){
-      var y = Math.round((Math.random()*H)/GRID)*GRID + 0.5;
-      var dir = Math.random() < .5 ? 1 : -1;
-      return {eixo:'h', y:y, x: dir>0 ? -700 : W+700, dir:dir,
-              v: 0.5 + Math.random()*1.1, len: 280 + Math.random()*380,
-              a: 0.10 + Math.random()*0.12};
-    } else {
-      var x = Math.round((Math.random()*W)/GRID)*GRID + 0.5;
-      var d = Math.random() < .5 ? 1 : -1;
-      return {eixo:'v', x:x, y: d>0 ? -700 : H+700, dir:d,
-              v: 0.5 + Math.random()*1.1, len: 280 + Math.random()*380,
-              a: 0.10 + Math.random()*0.12};
-    }
-  }
-
-  function povoar(){
-    linhas = [];
-    var n = W < 700 ? 2 : 3;
-    for(var i=0;i<n;i++){
-      var h = nova('h'); h.x = Math.random()*W; linhas.push(h);
-      var v = nova('v'); v.y = Math.random()*H; linhas.push(v);
-    }
-  }
-
-  function passo(){
-    ctx.clearRect(0, 0, W, H);
-    for(var i=0;i<linhas.length;i++){
-      var L = linhas[i], x1,y1,x2,y2, g;
-      if(L.eixo === 'h'){
-        L.x += L.dir * L.v;
-        x2 = L.x; y2 = L.y; x1 = L.x - L.dir*L.len; y1 = L.y;
-        if((L.dir>0 && L.x-L.len > W) || (L.dir<0 && L.x+L.len < 0)){ linhas[i]=nova('h'); continue; }
-      } else {
-        L.y += L.dir * L.v;
-        x2 = L.x; y2 = L.y; x1 = L.x; y1 = L.y - L.dir*L.len;
-        if((L.dir>0 && L.y-L.len > H) || (L.dir<0 && L.y+L.len < 0)){ linhas[i]=nova('v'); continue; }
+  var cv=document.getElementById('bg');
+  if(!cv || !cv.getContext) return;
+  var ctx=cv.getContext('2d'), w=0,h=0,dpr=1,paths=[],sparks=[],frame=0,raf=0;
+  var reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var CELL=52, mobile=false;
+  function rand(a,b){return a+Math.random()*(b-a)}
+  function resize(){
+    w=window.innerWidth;h=window.innerHeight;
+    mobile=w<720;CELL=mobile?44:52;dpr=Math.min(window.devicePixelRatio||1,2);
+    cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    paths=[];sparks=[];
+    var count=mobile?9:20;
+    for(var k=0;k<count;k++){
+      var x=Math.round(rand(-1,w/CELL+1))*CELL;
+      var y=Math.round(rand(-1,h/CELL+1))*CELL;
+      var segments=2+Math.floor(rand(0,4));
+      var pts=[[x,y]];
+      var horizontal=Math.random()>.5;
+      for(var j=0;j<segments;j++){
+        var len=CELL*(1+Math.floor(rand(0,3)))*(Math.random()>.5?1:-1);
+        if(horizontal) x=Math.max(-CELL,Math.min(w+CELL,x+len));
+        else y=Math.max(-CELL,Math.min(h+CELL,y+len));
+        pts.push([x,y]);horizontal=!horizontal;
       }
-      g = ctx.createLinearGradient(x1, y1, x2, y2);
-      g.addColorStop(0,   'rgba('+COR_TRACO+',0)');
-      g.addColorStop(0.6, 'rgba('+COR_TRACO+','+(L.a*0.7)+')');
-      g.addColorStop(1,   'rgba('+COR_LINHA+','+L.a+')');
-      ctx.strokeStyle = g; ctx.lineWidth = 2.6; ctx.lineCap = 'round';
-      ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
-      ctx.save();
-      ctx.shadowColor = 'rgba('+COR_LINHA+',0.9)'; ctx.shadowBlur = 8;
-      ctx.fillStyle = 'rgba('+COR_LINHA+','+L.a+')';
-      ctx.beginPath(); ctx.arc(x2, y2, 2.4, 0, 6.2832); ctx.fill();
-      ctx.restore();
+      var length=0;
+      for(var j=1;j<pts.length;j++)length+=Math.hypot(pts[j][0]-pts[j-1][0],pts[j][1]-pts[j-1][1]);
+      paths.push({pts:pts,len:length,offset:Math.random(),speed:rand(.00065,.0018),amber:Math.random()<.12});
+    }
+    for(var i=0;i<(mobile?18:42);i++) sparks.push({x:rand(0,w),y:rand(0,h),r:rand(.5,1.55),phase:rand(0,6.28)});
+    draw();
+  }
+  function pointAt(path,progress){
+    var remaining=progress*path.len,pts=path.pts;
+    for(var i=1;i<pts.length;i++){
+      var a=pts[i-1],b=pts[i],len=Math.hypot(b[0]-a[0],b[1]-a[1]);
+      if(remaining<=len && len>0)return [a[0]+(b[0]-a[0])*remaining/len,a[1]+(b[1]-a[1])*remaining/len];
+      remaining-=len;
+    }
+    return pts[pts.length-1];
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    var t=frame++;
+    for(var k=0;k<paths.length;k++){
+      var p=paths[k],pts=p.pts;
+      if(!p.len)continue;
+      ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);
+      for(var j=1;j<pts.length;j++)ctx.lineTo(pts[j][0],pts[j][1]);
+      ctx.lineWidth=1;ctx.strokeStyle=p.amber?'rgba(245,194,61,.095)':'rgba(73,157,244,.13)';ctx.stroke();
+      for(var j=1;j<pts.length-1;j++){
+        ctx.beginPath();ctx.arc(pts[j][0],pts[j][1],2,0,Math.PI*2);
+        ctx.fillStyle=p.amber?'rgba(245,194,61,.25)':'rgba(85,178,255,.25)';ctx.fill();
+      }
+      var pt=pointAt(p,reduced?p.offset:(p.offset+t*p.speed)%1);
+      var color=p.amber?'244,194,61':'85,174,255';
+      var glow=ctx.createRadialGradient(pt[0],pt[1],0,pt[0],pt[1],mobile?10:16);
+      glow.addColorStop(0,'rgba('+color+',.63)');glow.addColorStop(.24,'rgba('+color+',.22)');glow.addColorStop(1,'rgba('+color+',0)');
+      ctx.fillStyle=glow;ctx.beginPath();ctx.arc(pt[0],pt[1],mobile?10:16,0,Math.PI*2);ctx.fill();
+      ctx.fillStyle='rgba('+color+',.74)';ctx.beginPath();ctx.arc(pt[0],pt[1],1.65,0,Math.PI*2);ctx.fill();
+    }
+    for(var k=0;k<sparks.length;k++){
+      var s=sparks[k],alpha=reduced?.22:(.12+.13*(1+Math.sin(t*.014+s.phase))/2);
+      ctx.fillStyle='rgba(129,195,255,'+alpha+')';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();
     }
   }
-
-  var rodando = true;
-  function laco(){ if(rodando && !document.hidden) passo(); requestAnimationFrame(laco); }
-  document.addEventListener('visibilitychange', function(){ rodando = !document.hidden; });
-
-  var t;
-  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(function(){ dim(); povoar(); }, 200); });
-  dim(); povoar(); requestAnimationFrame(laco);
+  function tick(){if(document.hidden){raf=0;return;}draw();raf=requestAnimationFrame(tick)}
+  var timer;
+  window.addEventListener('resize',function(){clearTimeout(timer);timer=setTimeout(resize,180)},{passive:true});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden && !reduced && !raf)raf=requestAnimationFrame(tick)});
+  resize();if(!reduced)raf=requestAnimationFrame(tick);
 })();
 
 (function(){
