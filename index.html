@@ -53,7 +53,6 @@ img{max-width:100%; display:block}
 }
 .eyebrow::before{content:""; width:5px; height:5px; background:var(--accent2); border-radius:1px; flex:0 0 auto}
 
-/* ---------- botões ---------- */
 .btn{
   display:inline-flex; align-items:center; gap:.5em;
   font-family:var(--ff-display); font-weight:600; font-size:.95rem;
@@ -69,7 +68,6 @@ img{max-width:100%; display:block}
 .btn-accent:hover{background:#ffd467}
 .btn-sm{padding:.6em 1.1em; font-size:.86rem}
 
-/* ---------- topo ---------- */
 header.top{
   position:sticky; top:0; z-index:50;
   background:rgba(10,15,23,.72); backdrop-filter:blur(12px);
@@ -82,7 +80,6 @@ header.top{
 .nav a.link:hover{color:var(--text)}
 @media(max-width:860px){ .nav a.link{display:none} }
 
-/* ---------- hero ---------- */
 .hero{position:relative; overflow:hidden; padding:88px 0 64px}
 .hero .wrap{position:relative; display:grid; grid-template-columns:1fr 1.05fr; gap:52px; align-items:center}
 @media(max-width:960px){ .hero .wrap{grid-template-columns:1fr; gap:40px} }
@@ -93,7 +90,6 @@ header.top{
 .hero .trustline span{display:inline-flex; align-items:center; gap:.45em}
 .dot{width:6px; height:6px; border-radius:50%; background:var(--ok); flex:0 0 auto}
 
-/* ---------- mock pequeno do hero (prévia do sistema) ---------- */
 .hero-mock{
   background:linear-gradient(180deg,var(--elev),var(--panel));
   border:1px solid var(--border); border-radius:16px; overflow:hidden;
@@ -119,13 +115,11 @@ header.top{
 .hm-row .v{font-family:var(--ff-mono)}
 .hm-row .t{font-family:var(--ff-mono); font-size:.62rem; padding:.15em .5em; border-radius:6px; background:rgba(52,196,106,.12); color:var(--ok)}
 
-/* ---------- seções ---------- */
 section{padding:80px 0}
 .section-head{max-width:58ch; margin-bottom:40px}
 .section-head h2{font-size:clamp(1.6rem,3.2vw,2.3rem); font-weight:700; margin:10px 0}
 .section-head p{color:var(--muted); font-size:1.02rem}
 
-/* ---------- cards de serviços ---------- */
 .tools{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
 @media(max-width:820px){ .tools{grid-template-columns:1fr} }
 .card{
@@ -150,7 +144,6 @@ section{padding:80px 0}
 .card .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:4px}
 .flagship .mini-feats{display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; margin-top:4px}
 
-/* ---------- showcase do sistema ---------- */
 .showcase{background:var(--bg2)}
 .showcase-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:48px; align-items:center}
 @media(max-width:960px){ .showcase-grid{grid-template-columns:1fr} }
@@ -214,7 +207,6 @@ section{padding:80px 0}
 .sysdemo[data-theme="light"] .sd-tag{background:rgba(52,196,106,.14); color:#1a7a43}
 .sd-tag.pending{background:rgba(231,182,77,.18); color:#a97a16}
 
-/* ---------- por que / como funciona ---------- */
 .why{display:grid; grid-template-columns:repeat(4,1fr); gap:20px}
 @media(max-width:820px){ .why{grid-template-columns:repeat(2,1fr)} }
 @media(max-width:480px){ .why{grid-template-columns:1fr} }
@@ -230,7 +222,6 @@ section{padding:80px 0}
 .proof-panel svg{flex:0 0 auto; margin-top:2px}
 .proof-panel p{color:var(--muted); font-size:.92rem; line-height:1.6}
 
-/* ---------- planos ---------- */
 .plans{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch}
 @media(max-width:820px){ .plans{grid-template-columns:1fr} }
 .plan{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:30px; display:flex; flex-direction:column; gap:8px}
@@ -243,7 +234,6 @@ section{padding:80px 0}
 .plan ul li{display:flex; gap:9px}
 .plan .btn{margin-top:auto; justify-content:center}
 
-/* ---------- faq ---------- */
 .faq-list{display:grid; gap:12px; max-width:760px}
 .faq-item{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:4px 22px}
 .faq-item summary{
@@ -257,7 +247,6 @@ section{padding:80px 0}
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item p{color:var(--muted); font-size:.92rem; line-height:1.65; padding:0 0 20px}
 
-/* ---------- faixa final ---------- */
 .cta-band{background:linear-gradient(120deg,var(--panel),var(--elev)); border-top:1px solid var(--border); border-bottom:1px solid var(--border)}
 .cta-band .wrap{text-align:center; padding:68px 24px}
 .cta-band h2{font-size:clamp(1.7rem,3.8vw,2.4rem); font-weight:700}
@@ -265,13 +254,11 @@ section{padding:80px 0}
 .cta-band .proof{color:var(--muted); font-size:.82rem; margin-top:26px}
 .cta-band .ctas{margin-top:26px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
 
-/* ---------- rodapé ---------- */
 footer{padding:48px 0; color:var(--muted); font-size:.88rem}
 footer .wrap{display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:center}
 footer .logo{height:28px; opacity:.9; margin-bottom:12px}
 footer a:hover{color:var(--text)}
 
-/* ---------- animações ---------- */
 .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
 .reveal.in{opacity:1; transform:none}
 @media(prefers-reduced-motion:reduce){
@@ -281,79 +268,12 @@ footer a:hover{color:var(--text)}
 }
 :focus-visible{outline:2px solid var(--halo); outline-offset:2px; border-radius:6px}
 
-
-/* ================================================================
-   KORSEC / TECH ATMOSPHERE — evolução visual da landing page
-   Sem dependências externas; mantém os textos, links e componentes.
-   ================================================================ */
-:root{
-  --bg:#050a13; --bg2:#081323; --panel:#0c192b; --elev:#11243a;
-  --border:#25405c; --accent:#3684ff; --accent-bright:#62a6ff;
-  --halo:#80c2ff; --muted:#a1b5ca;
-}
-html{background:#050a13}
-body{
-  background:
-    radial-gradient(ellipse 65% 55% at 83% 8%,rgba(17,89,187,.22),transparent 75%),
-    radial-gradient(ellipse 65% 55% at 0% 39%,rgba(8,68,122,.16),transparent 75%),
-    linear-gradient(145deg,#050912 0%,#07111f 49%,#050a13 100%);
-  background-attachment:fixed;
-}
-/* Malha geométrica fina, coordenadas e brilhos azuis */
-body::before{
-  opacity:1;
-  background-image:
-    linear-gradient(rgba(70,142,210,.052) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(70,142,210,.052) 1px,transparent 1px);
-  background-size:52px 52px;
-  mask-image:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.32) 58%,rgba(0,0,0,.7));
-}
-body::after{
-  background:
-    radial-gradient(ellipse 38% 50% at 84% 26%,rgba(15,106,213,.12),transparent 75%),
-    linear-gradient(90deg,rgba(3,8,17,.18),transparent 30%,rgba(3,8,17,.12));
-}
-#bg{opacity:.95}
-.brandbar{height:2px;background:linear-gradient(90deg,transparent,#3894ff 30%,#77d4ff 56%,#f4c23d 78%,transparent);box-shadow:0 0 24px rgba(69,154,255,.5)}
-header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232,.15);box-shadow:0 8px 28px rgba(0,0,0,.12)}
-.hero{isolation:isolate; padding:104px 0 94px}
-.hero::before{
-  content:"";position:absolute;z-index:-1;pointer-events:none;
-  top:-270px;right:-210px;width:min(900px,85vw);aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,rgba(35,125,245,.16) 0%,rgba(22,81,170,.07) 40%,transparent 71%);
-}
-.hero::after{
-  content:"";position:absolute;left:6%;bottom:0;right:6%;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(94,170,252,.35),transparent);
-}
-.hero h1{letter-spacing:-.035em;font-size:clamp(2.25rem,4.5vw,3.65rem);line-height:1.16}
-.hero .sub{color:#b1c1d2}
-.hero .eyebrow{padding:8px 12px;border:1px solid rgba(81,153,240,.23);border-radius:7px;background:rgba(40,110,206,.075);letter-spacing:.09em}
-.hero-mock{background:linear-gradient(150deg,rgba(24,47,73,.95),rgba(7,18,35,.96));border-color:rgba(100,179,255,.3);box-shadow:0 30px 80px -23px rgba(0,0,0,.86),0 0 75px -50px rgba(57,151,255,.8)}
-.hero-mock::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 1px 0 rgba(151,210,255,.14)}
-.card,.why .item,.plan,.faq-item,.proof-panel{background:linear-gradient(150deg,rgba(17,35,55,.9),rgba(9,21,38,.93));border-color:rgba(88,143,196,.22);box-shadow:0 12px 36px rgba(0,0,0,.12)}
-.card:hover,.why .item:hover,.plan:hover{border-color:rgba(94,174,253,.46);box-shadow:0 18px 45px rgba(0,0,0,.22),0 0 28px rgba(44,124,232,.06)}
-.card.flagship{background:linear-gradient(125deg,rgba(22,51,80,.95),rgba(11,27,48,.96) 60%,rgba(17,45,75,.95));border-color:rgba(84,160,242,.4)}
-.showcase{background:linear-gradient(180deg,rgba(8,21,38,.8),rgba(7,17,32,.9))}
-#planos{background:linear-gradient(180deg,rgba(7,19,34,.86),rgba(9,24,43,.82)) !important}
-.cta-band{background:linear-gradient(110deg,rgba(10,27,49,.95),rgba(18,48,76,.94),rgba(9,23,43,.96));border-color:rgba(90,155,225,.22)}
-.btn-primary{background:linear-gradient(135deg,#2e75e8,#428eff);box-shadow:0 8px 25px -9px rgba(35,122,248,.55)}
-.btn-ghost{background:rgba(14,36,61,.25);border-color:rgba(110,166,221,.3)}
-.section-head .eyebrow{letter-spacing:.16em}
-@media(max-width:700px){
-  .hero{padding:66px 0 65px}
-  .hero h1{font-size:clamp(2rem,8vw,2.8rem)}
-  body::before{background-size:38px 38px;opacity:.6}
-}
-@media(prefers-reduced-motion:reduce){#bg{opacity:.75}}
-
 </style>
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
 <div class="brandbar" aria-hidden="true"></div>
 
-<!-- ================= TOPO ================= -->
 <header class="top">
   <div class="wrap">
     <a href="#topo" aria-label="Korsec"><img class="logo" src="logo-korsec-branca.png" alt="Korsec"></a>
@@ -363,13 +283,11 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
       <a class="link" href="#como">Como funciona</a>
       <a class="link" href="#planos">Planos</a>
       <a class="link" href="#faq">FAQ</a>
-      <!-- EDITE: troque o número pelo seu WhatsApp (formato 55 + DDD + número) -->
       <a class="btn btn-accent btn-sm" href="https://wa.me/5537999222538?text=Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">Diagnóstico gratuito</a>
     </nav>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <main id="topo">
 <section class="hero">
   <div class="wrap">
@@ -388,7 +306,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
       </div>
     </div>
 
-    <!-- mini prévia do sistema de gestão -->
     <div class="hero-mock reveal" id="heromock" aria-hidden="true">
       <div class="hm-bar"><i></i><i></i><i></i><span>app.korsec.com.br</span></div>
       <div class="hm-body">
@@ -414,7 +331,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   </div>
 </section>
 
-<!-- ================= SERVIÇOS ================= -->
 <section id="servicos">
   <div class="wrap">
     <div class="section-head reveal">
@@ -424,7 +340,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
     </div>
 
     <div class="tools">
-      <!-- ===== CARRO-CHEFE: SISTEMA DE GESTÃO ===== -->
       <article class="card flagship reveal">
         <div>
           <span class="badge">Disponível</span>
@@ -480,7 +395,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   </div>
 </section>
 
-<!-- ================= DEMONSTRAÇÃO DO SISTEMA ================= -->
 <section id="sistema" class="showcase">
   <div class="wrap">
     <div class="showcase-grid">
@@ -498,7 +412,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
         </div>
       </div>
 
-      <!-- ===== DEMO INTERATIVA (dados fictícios) ===== -->
       <div class="sysdemo reveal" id="sysdemo" data-theme="dark" aria-label="Demonstração do sistema de gestão Korsec, com dados fictícios">
         <div class="sd-top">
           <div class="sd-brand"><i></i> KORSEC · Sistema</div>
@@ -558,7 +471,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   </div>
 </section>
 
-<!-- ================= COMO FUNCIONA / POR QUE ================= -->
 <section id="como">
   <div class="wrap">
     <div class="section-head reveal">
@@ -589,7 +501,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
       </div>
     </div>
 
-    <!-- EDITE: troque pelo nome do cliente se tiver autorização para divulgar, ou mantenha genérico -->
     <div class="proof-panel reveal">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--halo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
       <p>Já migramos o ambiente Microsoft&nbsp;365 completo de uma indústria de médio porte — mais de 150&nbsp;GB de arquivos reorganizados em 16 departamentos, sem perder permissão de ninguém no meio do caminho.</p>
@@ -597,7 +508,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   </div>
 </section>
 
-<!-- ================= PLANOS ================= -->
 <section id="planos" style="background:var(--bg2)">
   <div class="wrap">
     <div class="section-head reveal">
@@ -615,13 +525,11 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c46a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Módulos liberados para explorar</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c46a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Suporte para começar</li>
         </ul>
-        <!-- EDITE: seu WhatsApp -->
         <a class="btn btn-ghost" href="https://wa.me/5537999222538?text=Quero%20o%20acesso%20de%20demonstra%C3%A7%C3%A3o" target="_blank" rel="noopener">Pedir demonstração</a>
       </div>
 
       <div class="plan destaque reveal">
         <span class="nome">Sistema de Gestão</span>
-        <!-- EDITE: preço — sugestão de partida, ajuste conforme módulos e nº de usuários -->
         <div class="preco">a partir de R$ 149<small>/mês</small></div>
         <p class="desc">ERP completo, módulos sob medida e hospedagem inclusa.</p>
         <ul>
@@ -629,7 +537,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c46a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Usuários e permissões ilimitados</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c46a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Atualizações e suporte por WhatsApp</li>
         </ul>
-        <!-- EDITE: seu WhatsApp -->
         <a class="btn btn-primary" href="https://wa.me/5537999222538?text=Quero%20contratar%20o%20sistema%20de%20gest%C3%A3o" target="_blank" rel="noopener">Falar sobre o sistema</a>
       </div>
 
@@ -642,14 +549,12 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c46a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Automações e integrações</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c46a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Microsoft 365 e suporte de TI</li>
         </ul>
-        <!-- EDITE: seu WhatsApp -->
         <a class="btn btn-ghost" href="https://wa.me/5537999222538?text=Quero%20um%20orcamento%20de%20projeto" target="_blank" rel="noopener">Pedir orçamento</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
 <section id="faq">
   <div class="wrap">
     <div class="section-head reveal">
@@ -683,7 +588,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
 </section>
 </main>
 
-<!-- ================= FAIXA FINAL ================= -->
 <section class="cta-band">
   <div class="wrap reveal">
     <h2>Pronto pra tirar sua empresa da planilha?</h2>
@@ -696,7 +600,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   </div>
 </section>
 
-<!-- ================= RODAPÉ ================= -->
 <footer>
   <div class="wrap">
     <div>
@@ -705,7 +608,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
       <div style="margin-top:6px">© 2026 Korsec · Sistemas Personalizados</div>
     </div>
     <div style="text-align:right; line-height:2">
-      <!-- EDITE: confirme/troque estes contatos -->
       <div><a href="https://wa.me/5537999222538" target="_blank" rel="noopener">WhatsApp: (37) 99922-2538</a></div>
       <div><a href="mailto:contato@korsec.com.br">contato@korsec.com.br</a></div>
       <div><a href="https://www.korsec.com.br" target="_blank" rel="noopener">www.korsec.com.br</a></div>
@@ -723,7 +625,6 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   els.forEach(function(e){ io.observe(e); });
 })();
 
-/* alterna claro/escuro na demonstração do sistema */
 (function(){
   var demo = document.getElementById('sysdemo');
   var btn = document.getElementById('sd-toggle-btn');
@@ -734,82 +635,76 @@ header.top{background:rgba(5,12,24,.82);border-bottom:1px solid rgba(103,165,232
   });
 })();
 
-/* ===================================================================
-   FUNDO TECH — circuitos, pulsos de dados e pontos de conexão.
-   Canvas leve e adaptativo, respeita preferência por movimento reduzido.
-   =================================================================== */
 (function(){
-  var cv=document.getElementById('bg');
-  if(!cv || !cv.getContext) return;
-  var ctx=cv.getContext('2d'), w=0,h=0,dpr=1,paths=[],sparks=[],frame=0,raf=0;
-  var reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var CELL=52, mobile=false;
-  function rand(a,b){return a+Math.random()*(b-a)}
-  function resize(){
-    w=window.innerWidth;h=window.innerHeight;
-    mobile=w<720;CELL=mobile?44:52;dpr=Math.min(window.devicePixelRatio||1,2);
-    cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    paths=[];sparks=[];
-    var count=mobile?9:20;
-    for(var k=0;k<count;k++){
-      var x=Math.round(rand(-1,w/CELL+1))*CELL;
-      var y=Math.round(rand(-1,h/CELL+1))*CELL;
-      var segments=2+Math.floor(rand(0,4));
-      var pts=[[x,y]];
-      var horizontal=Math.random()>.5;
-      for(var j=0;j<segments;j++){
-        var len=CELL*(1+Math.floor(rand(0,3)))*(Math.random()>.5?1:-1);
-        if(horizontal) x=Math.max(-CELL,Math.min(w+CELL,x+len));
-        else y=Math.max(-CELL,Math.min(h+CELL,y+len));
-        pts.push([x,y]);horizontal=!horizontal;
+  var prefereMenos = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prefereMenos) return;
+
+  var cv = document.getElementById('bg'), ctx = cv.getContext('2d');
+  var W, H, DPR, nos = [];
+  var COR_LINHA = '47,111,235';
+  var COR_NO = '122,167,255';
+  var COR_NO_AMBAR = '244,194,61';
+  var RAIO_LIGACAO = 150;
+
+  function dim(){
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth; H = window.innerHeight;
+    cv.width = W * DPR; cv.height = H * DPR;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
+
+  function povoar(){
+    nos = [];
+    var n = Math.round(Math.min(W, 1600) / (W < 700 ? 70 : 42));
+    for(var i=0;i<n;i++){
+      nos.push({
+        x: Math.random()*W, y: Math.random()*H,
+        vx: (Math.random()-0.5)*0.22, vy: (Math.random()-0.5)*0.22,
+        r: 1.3 + Math.random()*1.5,
+        ambar: Math.random() < 0.12
+      });
+    }
+  }
+
+  function passo(){
+    ctx.clearRect(0, 0, W, H);
+
+    for(var i=0;i<nos.length;i++){
+      var p = nos[i];
+      p.x += p.vx; p.y += p.vy;
+      if(p.x < -20) p.x = W+20; if(p.x > W+20) p.x = -20;
+      if(p.y < -20) p.y = H+20; if(p.y > H+20) p.y = -20;
+    }
+
+    for(var i=0;i<nos.length;i++){
+      for(var j=i+1;j<nos.length;j++){
+        var a = nos[i], b = nos[j];
+        var dx = a.x-b.x, dy = a.y-b.y;
+        var dist = Math.sqrt(dx*dx+dy*dy);
+        if(dist < RAIO_LIGACAO){
+          var alfa = (1 - dist/RAIO_LIGACAO) * 0.16;
+          ctx.strokeStyle = 'rgba('+COR_LINHA+','+alfa+')';
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
       }
-      var length=0;
-      for(var j=1;j<pts.length;j++)length+=Math.hypot(pts[j][0]-pts[j-1][0],pts[j][1]-pts[j-1][1]);
-      paths.push({pts:pts,len:length,offset:Math.random(),speed:rand(.00065,.0018),amber:Math.random()<.12});
     }
-    for(var i=0;i<(mobile?18:42);i++) sparks.push({x:rand(0,w),y:rand(0,h),r:rand(.5,1.55),phase:rand(0,6.28)});
-    draw();
-  }
-  function pointAt(path,progress){
-    var remaining=progress*path.len,pts=path.pts;
-    for(var i=1;i<pts.length;i++){
-      var a=pts[i-1],b=pts[i],len=Math.hypot(b[0]-a[0],b[1]-a[1]);
-      if(remaining<=len && len>0)return [a[0]+(b[0]-a[0])*remaining/len,a[1]+(b[1]-a[1])*remaining/len];
-      remaining-=len;
-    }
-    return pts[pts.length-1];
-  }
-  function draw(){
-    ctx.clearRect(0,0,w,h);
-    var t=frame++;
-    for(var k=0;k<paths.length;k++){
-      var p=paths[k],pts=p.pts;
-      if(!p.len)continue;
-      ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);
-      for(var j=1;j<pts.length;j++)ctx.lineTo(pts[j][0],pts[j][1]);
-      ctx.lineWidth=1;ctx.strokeStyle=p.amber?'rgba(245,194,61,.095)':'rgba(73,157,244,.13)';ctx.stroke();
-      for(var j=1;j<pts.length-1;j++){
-        ctx.beginPath();ctx.arc(pts[j][0],pts[j][1],2,0,Math.PI*2);
-        ctx.fillStyle=p.amber?'rgba(245,194,61,.25)':'rgba(85,178,255,.25)';ctx.fill();
-      }
-      var pt=pointAt(p,reduced?p.offset:(p.offset+t*p.speed)%1);
-      var color=p.amber?'244,194,61':'85,174,255';
-      var glow=ctx.createRadialGradient(pt[0],pt[1],0,pt[0],pt[1],mobile?10:16);
-      glow.addColorStop(0,'rgba('+color+',.63)');glow.addColorStop(.24,'rgba('+color+',.22)');glow.addColorStop(1,'rgba('+color+',0)');
-      ctx.fillStyle=glow;ctx.beginPath();ctx.arc(pt[0],pt[1],mobile?10:16,0,Math.PI*2);ctx.fill();
-      ctx.fillStyle='rgba('+color+',.74)';ctx.beginPath();ctx.arc(pt[0],pt[1],1.65,0,Math.PI*2);ctx.fill();
-    }
-    for(var k=0;k<sparks.length;k++){
-      var s=sparks[k],alpha=reduced?.22:(.12+.13*(1+Math.sin(t*.014+s.phase))/2);
-      ctx.fillStyle='rgba(129,195,255,'+alpha+')';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();
+
+    for(var i=0;i<nos.length;i++){
+      var p = nos[i];
+      var cor = p.ambar ? COR_NO_AMBAR : COR_NO;
+      ctx.fillStyle = 'rgba('+cor+',0.55)';
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
     }
   }
-  function tick(){if(document.hidden){raf=0;return;}draw();raf=requestAnimationFrame(tick)}
-  var timer;
-  window.addEventListener('resize',function(){clearTimeout(timer);timer=setTimeout(resize,180)},{passive:true});
-  document.addEventListener('visibilitychange',function(){if(!document.hidden && !reduced && !raf)raf=requestAnimationFrame(tick)});
-  resize();if(!reduced)raf=requestAnimationFrame(tick);
+
+  var rodando = true;
+  function laco(){ if(rodando && !document.hidden) passo(); requestAnimationFrame(laco); }
+  document.addEventListener('visibilitychange', function(){ rodando = !document.hidden; });
+
+  var t;
+  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(function(){ dim(); povoar(); }, 200); });
+  dim(); povoar(); requestAnimationFrame(laco);
 })();
 
 (function(){
